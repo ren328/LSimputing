@@ -14,3 +14,6 @@ The implement of PRS-CS method follows exactly the step described by the followi
 
 RF.py
 Code to implement RandomForest model
+
+interaction.R
+Code for interaction analysis 
