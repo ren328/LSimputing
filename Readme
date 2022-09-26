@@ -1,4 +1,5 @@
 This is the code for paper Imputing genetic components of trait values with GWAS summary data and individual-level genotypic data.
+This page is still under construction,if you have any questions, please send me an email(ren00075@umn.edu), thank you!
 
 batchsplit.R
 Split the SNP matrix, into batches, if does not want split the SNP matrix, no need to run this file.
@@ -18,4 +19,4 @@ Code to implement RandomForest model
 interaction.R
 Code for interaction analysis 
 
-If you have any questions, please send me an email(ren00075@umn.edu), thank you!
+
