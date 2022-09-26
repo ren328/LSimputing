@@ -54,3 +54,4 @@ history=model.fit(
 model.save("model_path")
 ##save the loss,change the json_path to your own
 json.dump(history.history, open("json_path",'w'))
+
