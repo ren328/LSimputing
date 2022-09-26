@@ -1,1 +1,4 @@
 This is the code for paper Imputing genetic components of trait values with GWAS summary data and individual-level genotypic data.
+
+batchsplit.R
+Split the SNP matirx, into batches, if does not want split the SNP matrix, no need to run this file.
