@@ -11,3 +11,6 @@ The python file to implement our ls method.
 
 ## PRS-CS method
 The implement of PRS-CS method follows exactly the step described by the following link: https://github.com/getian107/PRScs
+
+RF.py
+Code to implement RandomForest model
