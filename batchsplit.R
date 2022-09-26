@@ -23,3 +23,4 @@ scalesnp<-function(snp){
 snp_final<-lapply(data,scalesnp)
 
 save(snp_final,file="path")
+##snp_final is a list, each element in the list is the data for one batch, each batch could be used as the input in the ls.py.
