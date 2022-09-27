@@ -18,9 +18,11 @@ datasplit<-function(chunksize,id,data){
 data<-datasplit(chunksize,id,snp_test)
 ##scale by batch
 scalesnp<-function(snp){
-  snp_scale<-scale(snp)
-  return(snp_scale)
+ snp2<-apply(snp, 2, function(y) (y - mean(y)) / sd(y) ^ as.logical(sd(y)))
+ return(snp2)
 }
+
+
 snp_final<-lapply(data,scalesnp)
 
 save(snp_final,file="path")
