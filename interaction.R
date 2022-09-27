@@ -1,5 +1,6 @@
 require(data.table)
 ##load SNP matrix, already fill missing values and proper scaled, with significant SNPs already selected.
+##change the path to your own
 load("interaction_snp_path")
 ##change the SNP matrix name to data1
 data1<-
@@ -36,5 +37,5 @@ for(i in 1:ncol(index1)){
   beta_sd[i]<-summary(m1)$coef[4,2]
   p_value[i]<-summary(m1)$coef[4,4]
 }
-#save the result
+#save the result,change the path to your own
 save(beta,beta_sd,p_value,file="interaction_result_path")
