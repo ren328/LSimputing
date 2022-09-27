@@ -9,6 +9,7 @@ snp<-data.frame(snp)
 set.seed(1234)
 id=1:nrow(snp_test)
 index=sample(id)
+snp_test=snp_test[index,]
 datasplit<-function(chunksize,test_id,data){
   f1=ceiling(seq_along(test_id)/chunksize)
   data1<-split(data,f=f1)
