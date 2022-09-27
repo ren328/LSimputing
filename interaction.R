@@ -30,7 +30,7 @@ beta_sd<-c()
 p_value<-c()
 for(i in 1:ncol(index1)){
   #print(i)
-  m1<-lm(trait~snp_test[,index[1,i]]*snp_test[,index[2,i]])
+  m1<-lm(trait~snp_test[,index1[1,i]]*snp_test[,index1[2,i]])
   beta[i]<-summary(m1)$coef[4,1]
   beta_sd[i]<-summary(m1)$coef[4,2]
   p_value[i]<-summary(m1)$coef[4,4]
