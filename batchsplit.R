@@ -10,12 +10,12 @@ set.seed(1234)
 id=1:nrow(snp_test)
 index=sample(id)
 snp_test=snp_test[index,]
-datasplit<-function(chunksize,test_id,data){
-  f1=ceiling(seq_along(test_id)/chunksize)
+datasplit<-function(chunksize,id,data){
+  f1=ceiling(seq_along(id)/chunksize)
   data1<-split(data,f=f1)
   return(data1)
 }
-data<-datasplit(chunksize,index,snp_test)
+data<-datasplit(chunksize,id,snp_test)
 ##scale by batch
 scalesnp<-function(snp){
   snp_scale<-scale(snp)
