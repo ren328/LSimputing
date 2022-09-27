@@ -18,9 +18,10 @@ while(j < nrow(cor_bed) )
 snp_test = data1[,ind]
 
 len<-ncol(snp_test)
-##load trait value
-trait<-load("trait_path")
-traitnew<-scale(trait,scale=F)
+##load trait value,already proper scaled
+load("trait_path")
+trait<-
+
 index<-1:len
 index1<-combn(index, 2)
 
@@ -29,7 +30,7 @@ beta_sd<-c()
 p_value<-c()
 for(i in 1:ncol(index1)){
   #print(i)
-  m1<-lm(traitnew~snp_test[,index[1,i]]*snp_test[,index[2,i]])
+  m1<-lm(trait~snp_test[,index[1,i]]*snp_test[,index[2,i]])
   beta[i]<-summary(m1)$coef[4,1]
   beta_sd[i]<-summary(m1)$coef[4,2]
   p_value[i]<-summary(m1)$coef[4,4]
