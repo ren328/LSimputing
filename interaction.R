@@ -20,6 +20,7 @@ snp_test = data1[,ind]
 len<-ncol(snp_test)
 ##load trait value,already proper scaled
 load("trait_path")
+##change the trait name to trait
 trait<-
 
 index<-1:len
