@@ -1,5 +1,5 @@
 require(data.table)
-##load SNP matrix, already fill missing values and proper scaled, with significant SNPs selected.
+##load SNP matrix, already fill missing values and proper scaled, with significant SNPs already selected.
 load("path")
 ##change the SNP matrix name to data1
 data1<-
