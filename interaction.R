@@ -1,6 +1,6 @@
 require(data.table)
 ##load SNP matrix, already fill missing values and proper scaled, with significant SNPs already selected.
-load("snp_path")
+load("interaction_snp_path")
 ##change the SNP matrix name to data1
 data1<-
 ##prune process
