@@ -21,7 +21,8 @@ with localconverter(robjects.default_converter + pandas2ri.converter):
      snp_test= rfunction(batchsize)
      snp_test= snp_test.T
         
-##load GWAS summary statistics(\beta*)
+##Use proper function to load the GWAS summary statistics(\beta*) according to the file format of the data
+##A .txt file is used here as an example
 beta_final=np.loadtxt("path")
 
 
