@@ -26,5 +26,5 @@ forest=RandomForestRegressor(n_estimators=100,criterion='mse',random_state=1,n_j
 forest.fit(X_train,y_train)
 y_test_pred=forest.predict(X_test)
 
-##change path to save the prediction result
+##use proper function to save the result,change path to save the prediction result
 np.savetxt("path",y_test_pred)
