@@ -13,7 +13,8 @@ from rpy2.robjects.conversion import localconverter
 
 ##batchsize,if does not split into batch, then use number of individuals in the SNP matrix as batchsize
 batchsize=
-##change Rtoptyhon_pyth to your own     
+##change Rtoptyhon_pyth to your own 
+##Use proper function to load the SNP matrix, here is an example of using the .RData format of SNP matrix.
 r = robjects.r
 r['source']('Rtopython_pyth/rtopy.R')
 rfunction = robjects.globalenv['f0']
