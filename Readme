@@ -12,12 +12,14 @@ The python file to implement our ls method.
 
 #PRS-CS method
 The implement of PRS-CS method follows exactly the step described by the following link: https://github.com/getian107/PRScs
+See the below reference for more details: Ge, T., Chen, C.Y., Ni, Y., Feng, Y.C.A., Smoller, J.W. Polygenic Prediction via Bayesian Regression and Continuous Shrinkage Priors.
+Nature Communications, 10, 1776 (2019). 
 
 #RF.py
-Code to implement RandomForests model, need a well-perepared SNP matrix and trait vector, more details could be seen in the python file.
+Code to implement RandomForests model.
 
 #interaction.R
-Code for interaction analysis, need a well-prepared SNP matrix and trait vector, more details could be seen in the R file. 
+Code for interaction analysis.
 
 #cholesky.py
 Code to perform cholesky decomposition.
