@@ -14,9 +14,10 @@ import rpy2.robjects as robjects
 from rpy2.robjects import pandas2ri
 from rpy2.robjects.conversion import localconverter
 
-
-##load snp matrix,choose the function and path to load the snp matrix
-snp_test="path"
+##load snp matrix
+##change the path to your own, use proper function to load the snp
+##
+snp_test="snp_path"
 
 
 
