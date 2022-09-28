@@ -19,5 +19,8 @@ Code to implement RandomForests model, need a well-perepared SNP matrix and trai
 #interaction.R
 Code for interaction analysis, need a well-prepared SNP matrix and trait vector, more details could be seen in the R file. 
 
+#cholesky.py
+Code to perform cholesky decomposition.
+
 #supp.R
 This R file contains miscellaneous parts of the study, including truncate and transform p-value, plot setting, and so on. 
