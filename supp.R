@@ -47,3 +47,15 @@ for(i in 1:length(p1)){
   }
 }
 p2<--log10(p1)
+
+
+##Use proper function to load SNP matrix and trait,should be proper scaled
+##Change the path to your own
+##datals should be a data.frame with colnames trait,age,sex
+datals="path"
+
+m1<-lm(trait~age+sex+age*sex+I(age^2)+I(sex*age^2),data=datals)
+yhat<-predict(m1,datals[,-1])
+##use proper function to save yhat
+##change the path to your own
+save(yhat,"path")
