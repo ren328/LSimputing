@@ -5,7 +5,7 @@ This page is still under construction,if you have any questions, please send me 
 Split the SNP matrix, into batches if does not want split the SNP matrix, no need to look at this file.
 
 #rtopy.R
-This is an R file to change .RData to the format which python file could use.
+This is an R file which is used in ls.py to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
 
 #ls.py
 The python file to implement our ls method.
