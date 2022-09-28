@@ -5,6 +5,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras import regularizers
 
+##This file is to get the result for one batch, to get the result for all sample, change the cp_path to corresponding path 
 ##input batchsize
 batchsize=
 def my_loss(y_true, y_pred):
@@ -25,5 +26,5 @@ i=500
 ##change cp_path to the checkpoint path
 model.load_weights(r"cp_path/cp-{:04d}.ckpt".format(i)) 
 yls=model.weights[0].numpy().reshape(-1)
-##path to save the result
+##use proper function to save the result, change the path to your own
 np.savetxt("path",yls)
