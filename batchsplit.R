@@ -1,5 +1,5 @@
-##load snp matirx, n*p
-snp_test<-load("path")
+##use proper function to load snp matrix, change path to your own
+snp_test="path"
 ##fill missing values
 snp<-apply(snp_test, 2, function(x) replace(x, is.na(x), mean(x, na.rm = TRUE)))
 snp<-data.frame(snp)
@@ -24,6 +24,6 @@ scalesnp<-function(snp){
 
 
 snp_final<-lapply(data,scalesnp)
-
+##use proper function to save the result
 save(snp_final,file="path")
 ##snp_final is a list, each element in the list is the data for one batch, each batch could be used as the input in the ls.py.
