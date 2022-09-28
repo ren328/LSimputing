@@ -5,7 +5,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras import regularizers
 
-##This file is to get the result for one batch, to get the result for all sample, change the cp_path to corresponding path 
+##This file is to get the result for one batch, to get the result for all sample, change the cp_path accordingly
 ##input batchsize
 batchsize=
 def my_loss(y_true, y_pred):
