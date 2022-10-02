@@ -20,8 +20,7 @@ test=np.random.normal(0,1,(1,batchsize))
 metric=model.predict(test)
 
 
-epoch=500
-yhat=np.zeros(epoch)
+
 i=500
 ##change cp_path to the checkpoint path
 model.load_weights(r"cp_path/cp-{:04d}.ckpt".format(i)) 
