@@ -2,13 +2,13 @@ This is the code for paper Imputing genetic components of trait values with GWAS
 This page is still under construction,if you have any questions, please send me an email(ren00075@umn.edu), thank you!
 
 #batchsplit.R
-Code to fill NA and scale the SNP matrix, also could be used to split the data into batches, see more details in the file.
+Code to fill NA and deal with the SNP matrix, also could be used to split the data into batches, see more details in the file.
 
 #rtopy.R
 This is an R file which is used in ls.py to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
 
-#ls.py
-The python file to implement our ls method.
+#lsADAM.py
+The python file to implement our ls method with ADAM algorithm.
 
 #gety.py
 To get the imputed trait value after getting the result of ls.py.
