@@ -10,19 +10,35 @@ import rpy2.robjects as robjects
 from rpy2.robjects import pandas2ri
 from rpy2.robjects.conversion import localconverter
 
-
-##Use proper function to load SNP, should be NA filled
+##value of lambda, could be changed to  your own choice
+lam=1e-6
+##Use proper function to load SNP, should be NA filled and centered
 snp="path"
+snp=np.array(snp)
+p=np.shape(snp)[1]
+for j in range(p):
+  c=snp[:,j]
+  cp=np.matmul(c.T,c)
+  cp1=1/cp
+  res.append(cp1)
 
-##Use proper funciton to load trait
+res1=np.diag(res)
+cxt=np.matmul(res1,snp.T)
+
+
+##Use proper funciton to load GWAS summary statistics
 beta="path"
  
 ##record time
 time1=time.process_time()
 
-xxt=np.matmul(snp,snp.T)
+xxt=np.matmul(cxt.T,cxt)
+a1=np.diag(xxt)
+a2=a1+lam
+np.fill_diagonal(xxt,a2)
 
-xtbeta=np.matmul(snp,beta)
+
+xtbeta=np.matmul(cxt.T,beta)
 
 u= scipy.linalg.cholesky(xxt)
 
