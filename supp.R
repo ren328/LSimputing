@@ -11,9 +11,9 @@ snp_rec[snp_rec==2]<-1
 
 
 ##Code to pursue marginal association
-##Use proper function to load SNP data,change the path to your own, should be NA filled and proper scaled
+##Use proper function to load SNP data,change the path to your own, should be NA filled 
 snp="snp_path"
-##Use proper function to load trait, should be proper scaled
+##Use proper function to load trait
 trait="trait_path"
 
 beta<-c()
