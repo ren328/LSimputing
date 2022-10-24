@@ -16,6 +16,8 @@ lam=1e-6
 snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
+##record time
+time1=time.process_time()
 for j in range(p):
   c=snp[:,j]
   cp=np.matmul(c.T,c)
@@ -29,8 +31,7 @@ cxt=np.matmul(res1,snp.T)
 ##Use proper funciton to load GWAS summary statistics
 beta="path"
  
-##record time
-time1=time.process_time()
+
 
 xxt=np.matmul(cxt.T,cxt)
 a1=np.diag(xxt)
