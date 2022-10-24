@@ -27,5 +27,8 @@ Code for interaction analysis.
 #cholesky.py
 Code to perform cholesky decomposition.
 
+#ginv.py
+Code to directly calculate the generalized inverse 
+
 #supp.R
 This R file contains miscellaneous parts of the study, including truncate and transform p-value, plot setting, and so on. 
