@@ -11,8 +11,7 @@ import rpy2.robjects as robjects
 from rpy2.robjects import pandas2ri
 from rpy2.robjects.conversion import localconverter
 
-##value of lambda, could be changed to  your own choice
-lam=1e-6
+
 ##Use proper function to load SNP, should be NA filled and centered
 snp="path"
 snp=np.array(snp)
