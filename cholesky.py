@@ -11,10 +11,10 @@ from rpy2.robjects import pandas2ri
 from rpy2.robjects.conversion import localconverter
 
 
-##Use proper function to load SNP, should be NA filled and proper scaled
+##Use proper function to load SNP, should be NA filled
 snp="path"
 
-##Use proper funciton to load trait, should be proper scaled
+##Use proper funciton to load trait
 beta="path"
  
 ##record time
