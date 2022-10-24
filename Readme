@@ -30,5 +30,8 @@ Code to perform cholesky decomposition.
 #ginv.py
 Code to directly calculate the generalized inverse 
 
+#ginv1.py
+Code for the inverse method
+
 #supp.R
 This R file contains miscellaneous parts of the study, including truncate and transform p-value, plot setting, and so on. 
