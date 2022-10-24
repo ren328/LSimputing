@@ -1,5 +1,5 @@
 require(data.table)
-##load SNP matrix, already fill missing values and proper scaled, with significant SNPs already selected.
+##load SNP matrix, already fill missing values, with significant SNPs already selected.
 ##use proper function to load the SNP, change the path to your own
 data1="interaction_snp_path"
 ##prune process
@@ -17,7 +17,7 @@ while(j < nrow(cor_bed) )
 snp_test = data1[,ind]
 
 len<-ncol(snp_test)
-##load trait value,already proper scaled
+##load trait value
 ##use proper function to load the trait, change the path to your own
 trait="trait_path"
 
