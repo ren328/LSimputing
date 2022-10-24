@@ -4,8 +4,8 @@ snp_test="path"
 snp<-apply(snp_test, 2, function(x) replace(x, is.na(x), mean(x, na.rm = TRUE)))
 snp<-data.frame(snp)
 
-##scale SNP matrix, if want to split data into batches, skip this chunk and run the following chunks.
-snp_final=apply(snp, 2, function(y) (y - mean(y)) / sd(y) ^ as.logical(sd(y)))  
+##deal with SNP matrix, if want to split data into batches, skip this chunk and run the following chunks.
+snp_final=apply(snp, 2, function(y) (y - mean(y)))  
 ##use proper function to save the result
 save(snp_final,file="path")
 
@@ -21,14 +21,14 @@ datasplit<-function(chunksize,id,data){
   return(data1)
 }
 data<-datasplit(chunksize,id,snp_test)
-##scale by batch
-scalesnp<-function(snp){
- snp2<-apply(snp, 2, function(y) (y - mean(y)) / sd(y) ^ as.logical(sd(y)))
+##centered by batch
+centersnp<-function(snp){
+ snp2<-apply(snp, 2, function(y) (y - mean(y)))
  return(snp2)
 }
 
 
-snp_final<-lapply(data,scalesnp)
+snp_final<-lapply(data,centersnp)
 ##use proper function to save the result
 save(snp_final,file="path")
 ##snp_final is a list, each element in the list is the data for one batch, each batch could be used as the input in the ls.py.
