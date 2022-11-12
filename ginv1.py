@@ -17,7 +17,7 @@ lam=1e-6
 snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
-
+res=[]
 time1=time.process_time()
 for j in range(p):
   c=snp[:,j]
@@ -37,6 +37,7 @@ xxt=np.matmul(cxt.T,cxt)
 
 a1=np.diag(xxt)
 a2=a1+lam
+np.fill_diagonal(xxt,a2)
 xxtinv=np.linalg.inv(xxt)
 
 reg=np.matmul(xxtinv,cxt.T)
