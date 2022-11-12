@@ -17,6 +17,7 @@ snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
 
+res=[]
 time1=time.process_time()
 for j in range(p):
   c=snp[:,j]
