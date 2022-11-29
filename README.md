@@ -8,13 +8,18 @@ This page is still under construction,if you have any questions, please send me 
 #### batchsplit.R
 Code to fill NA, center/standardize the SNP matrix, also could be used to split the data into batches, see more details in the file.
 
-#rtopy.R
-This is an R file which is used in ls.py to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
+
 
 
 ## Computational Methods
 #### lsADAM.py
 The python file to implement our ls method with ADAM algorithm.
+
+###### rtopy.R
+This is an R file which is used in lsADAM.py to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
+
+###### gety.py
+To get the imputed trait value after getting the result of lsADAM.py.
 
 #### cholesky.py
 Code to perform cholesky decomposition.
@@ -25,8 +30,6 @@ Code to directly calculate the generalized inverse
 #### inv.py
 Code for the inverse method
 
-#gety.py
-To get the imputed trait value after getting the result of ls.py.
 
 ## Other Analysis
 #### PRS-CS method
