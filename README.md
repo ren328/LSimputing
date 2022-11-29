@@ -2,7 +2,7 @@ This is the code for paper Imputing genetic components of trait values with GWAS
 This page is still under construction,if you have any questions, please send me an email(ren00075@umn.edu), thank you!
 
 
-## Data processing
+## Data Processing
 
 
 #### batchsplit.R
