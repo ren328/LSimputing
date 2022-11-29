@@ -28,7 +28,7 @@ Code for the inverse method
 #gety.py
 To get the imputed trait value after getting the result of ls.py.
 
-## Other analysis
+## Other Analysis
 #PRS-CS method
 The implement of PRS-CS method follows exactly the step described by the following link: https://github.com/getian107/PRScs
 See the below reference for more details: Ge, T., Chen, C.Y., Ni, Y., Feng, Y.C.A., Smoller, J.W. Polygenic Prediction via Bayesian Regression and Continuous Shrinkage Priors.
