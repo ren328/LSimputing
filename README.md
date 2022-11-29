@@ -6,7 +6,7 @@ This page is still under construction,if you have any questions, please send me 
 
 
 #### batchsplit.R
-Code to fill NA and deal with the SNP matrix, also could be used to split the data into batches, see more details in the file.
+Code to fill NA, center/standardize the SNP matrix, also could be used to split the data into batches, see more details in the file.
 
 #rtopy.R
 This is an R file which is used in ls.py to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
