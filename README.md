@@ -11,6 +11,8 @@ Code to fill NA, center/standardize the SNP matrix, also could be used to split 
 #rtopy.R
 This is an R file which is used in ls.py to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
 
+
+## Computational Methods
 #lsADAM.py
 The python file to implement our ls method with ADAM algorithm.
 
