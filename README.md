@@ -29,15 +29,15 @@ Code for the inverse method
 To get the imputed trait value after getting the result of ls.py.
 
 ## Other Analysis
-#PRS-CS method
+#### PRS-CS method
 The implement of PRS-CS method follows exactly the step described by the following link: https://github.com/getian107/PRScs
 See the below reference for more details: Ge, T., Chen, C.Y., Ni, Y., Feng, Y.C.A., Smoller, J.W. Polygenic Prediction via Bayesian Regression and Continuous Shrinkage Priors.
 Nature Communications, 10, 1776 (2019). 
 
-#RF.py
+##### RF.py
 Code to implement RandomForests model.
 
-#interaction.R
+#### interaction.R
 Code for interaction analysis.
 
 
