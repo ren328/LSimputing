@@ -13,8 +13,17 @@ This is an R file which is used in ls.py to change .RData to the format which py
 
 
 ## Computational Methods
-#lsADAM.py
+#### lsADAM.py
 The python file to implement our ls method with ADAM algorithm.
+
+#### cholesky.py
+Code to perform cholesky decomposition.
+
+#### ginv.py
+Code to directly calculate the generalized inverse 
+
+#### inv.py
+Code for the inverse method
 
 #gety.py
 To get the imputed trait value after getting the result of ls.py.
@@ -30,14 +39,7 @@ Code to implement RandomForests model.
 #interaction.R
 Code for interaction analysis.
 
-#cholesky.py
-Code to perform cholesky decomposition.
 
-#ginv.py
-Code to directly calculate the generalized inverse 
-
-#ginv1.py
-Code for the inverse method
 
 #supp.R
 This R file contains miscellaneous parts of the study, including truncate and transform p-value, plot setting, and so on. 
