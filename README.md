@@ -5,7 +5,7 @@ This page is still under construction,if you have any questions, please send me 
 ## Data processing
 
 
-#batchsplit.R
+#### batchsplit.R
 Code to fill NA and deal with the SNP matrix, also could be used to split the data into batches, see more details in the file.
 
 #rtopy.R
