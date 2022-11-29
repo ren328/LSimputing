@@ -44,6 +44,6 @@ Code to implement RandomForests model.
 Code for interaction analysis.
 
 
-
-#supp.R
+## Miscellaneous
+#### Supp.R
 This R file contains miscellaneous parts of the study, including truncate and transform p-value, plot setting, and so on. 
