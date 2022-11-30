@@ -9,13 +9,13 @@ import rpy2.robjects as robjects
 from rpy2.robjects import pandas2ri
 from rpy2.robjects.conversion import localconverter
 
-##load snp matrix,already fill missing values
-##change the path to your own, use proper function to load the snp
+##load snp matrix
+##change the path to your own
 snp_test="snp_path"
 
 
 
-##load trait, use proper function to load the trait
+##load trait values
 ##change the path to your own
 trait="trait_truth"
 
