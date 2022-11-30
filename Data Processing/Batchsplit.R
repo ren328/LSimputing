@@ -28,4 +28,4 @@ snp_final<-lapply(data,scale,scale=F)
            
 ##save the result
 save(snp_final,file="path")
-##snp_final is a list, each element in the list is the data for one batch.
+##snp_final is a list, each element in the list is the data for one batch
