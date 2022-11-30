@@ -13,6 +13,12 @@ from rpy2.robjects.conversion import localconverter
 
 ##value of lambda, could be changed to  your own choice
 lam=1e-6
+##
+wls=False
+
+##Use proper funciton to load GWAS summary statistics
+beta="path"
+sd="path"
 ##Use proper function to load SNP, should be NA filled and centered
 snp="path"
 snp=np.array(snp)
@@ -26,11 +32,13 @@ for j in range(p):
   res.append(cp1)
 
 res1=np.diag(res)
-cxt=np.matmul(res1,snp.T)
+if wls==True:
+  cxt1=np.matmul(res1,snp.T)
+  cxt=np.divide(cxt1.T,sd).T
+else:
+  cxt=np.matmul(res1,snp.T)
 
 
-##Use proper funciton to load GWAS summary statistics
-beta="path"
  
 
 xxt=np.matmul(cxt.T,cxt)
