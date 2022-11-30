@@ -9,6 +9,9 @@ snp_rec=snp_test
 snp_rec[snp_rec==1]<-0
 snp_rec[snp_rec==2]<-1
 
+##Code to get the adjusted trait values
+m1<-lm(HDL~age+sex+age*sex+I(age^2)+I(sex*age^2),data)
+ypred<-predict(m1,data)
 
 ##Code to pursue marginal association
 ##Use proper function to load SNP data,change the path to your own, should be NA filled 
