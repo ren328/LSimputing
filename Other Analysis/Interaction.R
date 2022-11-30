@@ -1,6 +1,6 @@
 require(data.table)
 ##load SNP matrix, already fill missing values, with significant SNPs already selected.
-##use proper function to load the SNP, change the path to your own
+##load the SNP, change the path to your own
 data1="interaction_snp_path"
 ##prune process
 cor_cutoff = 0.99
@@ -17,8 +17,8 @@ while(j < nrow(cor_bed) )
 snp_test = data1[,ind]
 
 len<-ncol(snp_test)
-##load trait value
-##use proper function to load the trait, change the path to your own
+##load trait values
+##change the path to your own
 trait="trait_path"
 
 
@@ -29,11 +29,10 @@ beta<-c()
 beta_sd<-c()
 p_value<-c()
 for(i in 1:ncol(index1)){
-  #print(i)
   m1<-lm(trait~snp_test[,index1[1,i]]*snp_test[,index1[2,i]])
   beta[i]<-summary(m1)$coef[4,1]
   beta_sd[i]<-summary(m1)$coef[4,2]
   p_value[i]<-summary(m1)$coef[4,4]
 }
-#use proper function to save the result,change the path to your own
+#save the result,change the path to your own
 save(beta,beta_sd,p_value,file="interaction_result_path")
