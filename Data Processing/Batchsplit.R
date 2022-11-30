@@ -12,7 +12,7 @@ snp<-data.frame(snp)
 set.seed(1234)
 id=1:nrow(snp)
 index=sample(id)
-snp=snp[index,]
+snp1=snp[index,]
 
 ##chunksize:sample size in per batch
 datasplit<-function(chunksize,id,data){
@@ -21,7 +21,7 @@ datasplit<-function(chunksize,id,data){
   return(data1)
 }
 ##change the chunksize to your own           
-data<-datasplit(chunksize,id,snp)
+data<-datasplit(chunksize,id,snp1)
 
 ##centered by batch
 centersnp<-function(snp){
