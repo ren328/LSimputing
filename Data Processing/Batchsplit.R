@@ -4,23 +4,24 @@ snp_test="path"
 snp<-apply(snp_test, 2, function(x) replace(x, is.na(x), mean(x, na.rm = TRUE)))
 snp<-data.frame(snp)
 
-##deal with SNP matrix, if want to split data into batches, skip this chunk and run the following chunks.
-snp_final=apply(snp, 2, function(y) (y - mean(y)))  
-##use proper function to save the result
-save(snp_final,file="path")
+
 
 ##batch split          
 ##split data into batches, change the seed for different partition.
+          
 set.seed(1234)
 id=1:nrow(snp_test)
 index=sample(id)
 snp_test=snp_test[index,]
+
+##chunksize:sample size in per batch
 datasplit<-function(chunksize,id,data){
   f1=ceiling(seq_along(id)/chunksize)
   data1<-split(data,f=f1)
   return(data1)
 }
 data<-datasplit(chunksize,id,snp_test)
+
 ##centered by batch
 centersnp<-function(snp){
  snp2<-apply(snp, 2, function(y) (y - mean(y)))
