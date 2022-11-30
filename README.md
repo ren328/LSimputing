@@ -13,11 +13,13 @@ Code to fill NA, center/standardize the SNP matrix, also could be used to split 
 
 ## Computational Methods
 To run the algorithms, one should prepare the SNP matrix and the GWAS summary statistics for the corresponding SNPs.
+###### Rtopy.R
+This is an R file which is used in .py files to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
+
 #### LSADAM.py
 The python file to implement our ls method with ADAM algorithm.
 
-###### Rtopy.R
-This is an R file which is used in lsADAM.py to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
+
 
 ###### Gety.py
 To get the imputed trait value after getting the result of lsADAM.py.
