@@ -13,7 +13,7 @@ from rpy2.robjects.conversion import localconverter
 
 ##value of lambda, could be changed to  your own choice
 lam=1e-6
-##
+##change wls to True if want use WLS method
 wls=False
 
 ##Use proper funciton to load GWAS summary statistics
