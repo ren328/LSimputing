@@ -20,6 +20,7 @@ datasplit<-function(chunksize,id,data){
   data1<-split(data,f=f1)
   return(data1)
 }
+##change the chunksize to your own           
 data<-datasplit(chunksize,id,snp_test)
 
 ##centered by batch
