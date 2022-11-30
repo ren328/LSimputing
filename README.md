@@ -12,6 +12,7 @@ Code to fill NA, center/standardize the SNP matrix, also could be used to split 
 
 
 ## Computational Methods
+To run the algorithms, one should prepare the SNP matrix and the GWAS summary statistics for the corresponding SNPs.
 #### LSADAM.py
 The python file to implement our ls method with ADAM algorithm.
 
