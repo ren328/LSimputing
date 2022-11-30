@@ -16,6 +16,7 @@ lam=1e-6
 snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
+res=[]
 ##record time
 time1=time.process_time()
 for j in range(p):
