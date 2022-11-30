@@ -23,14 +23,9 @@ datasplit<-function(chunksize,id,data){
 ##change the chunksize to your own           
 data<-datasplit(chunksize,id,snp1)
 
-##centered by batch
-centersnp<-function(snp){
- snp2<-apply(snp, 2, function(y) (y - mean(y)))
- return(snp2)
-}
-
-
-snp_final<-lapply(data,centersnp)
-##use proper function to save the result
+##centered(scale=F)/standardized(scale=T) by batch
+snp_final<-lapply(data,scale,scale=F)
+           
+##save the result
 save(snp_final,file="path")
-##snp_final is a list, each element in the list is the data for one batch, each batch could be used as the input in the LSADAM.py.
+##snp_final is a list, each element in the list is the data for one batch.
