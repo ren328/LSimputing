@@ -12,7 +12,7 @@ Code to fill NA, center/standardize the SNP matrix, also could be used to split 
 
 
 ## Computational Methods
-To run the algorithms, one should prepare the SNP matrix and the GWAS summary statistics for the corresponding SNPs.
+To run the algorithms, one should prepare the proper scaled SNP matrix and the GWAS summary statistics for the corresponding SNPs.
 ###### Rtopy.R
 This is an R file which is used in .py files to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
 
