@@ -12,11 +12,14 @@ from rpy2.robjects.conversion import localconverter
 
 ##value of lambda, could be changed to  your own choice
 lam=1e-6
+##change wls to True if want use WLS method
+wls=False
+
 ##Use proper funciton to load GWAS summary statistics
 beta="path"
 sd="path"
 
-wls=False
+
 ##Use proper function to load SNP, should be NA filled and centered
 snp="path"
 snp=np.array(snp)
