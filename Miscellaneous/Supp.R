@@ -47,3 +47,35 @@ for(i in 1:length(p1)){
   }
 }
 p2<--log10(p1)
+
+
+##The Venn diagrams is drawn with R package Venndiagram and RColorBrewer
+display_venn<-function(x,...){
+library(VennDiagram)
+grid.newpage()
+venn_object <- venn.diagram(x, filename = NULL, ...)
+grid.draw(venn_object)
+}
+##Set data in the Venn diagram
+set1 <- 
+set2<- 
+set3 <- 
+x = list(A=set1, B=set2,C=set3)
+library(RColorBrewer)
+myCol <- brewer.pal(3, "Pastel2")
+display_venn(x,category.names = c(" ", " " , " ")#set labels
+             ,lwd = 2,
+             lty = 'blank',
+             fill = myCol,
+             cex = 3,
+             cat.cex = 1.5,
+             cat.fontface = "bold",
+             cat.default.pos = "outer",
+             cat.pos = c(-27, 27, 135),
+             cat.dist = c(0.055, 0.055, 0.085),
+             cat.fontfamily = "sans"
+)
+
+
+
+
