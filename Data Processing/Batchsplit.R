@@ -10,9 +10,9 @@ snp<-data.frame(snp)
 ##split data into batches, change the seed for different partition.
           
 set.seed(1234)
-id=1:nrow(snp_test)
+id=1:nrow(snp)
 index=sample(id)
-snp_test=snp_test[index,]
+snp=snp[index,]
 
 ##chunksize:sample size in per batch
 datasplit<-function(chunksize,id,data){
@@ -21,7 +21,7 @@ datasplit<-function(chunksize,id,data){
   return(data1)
 }
 ##change the chunksize to your own           
-data<-datasplit(chunksize,id,snp_test)
+data<-datasplit(chunksize,id,snp)
 
 ##centered by batch
 centersnp<-function(snp){
