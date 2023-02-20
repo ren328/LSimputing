@@ -35,6 +35,7 @@ for j in range(p):
 
 res1=np.diag(res)
 if wls==True:
+  beta=np.divide(beta,sd)
   cxt1=np.matmul(res1,snp.T)
   cxt=np.divide(cxt1.T,sd).T
 else:
