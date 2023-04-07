@@ -21,6 +21,8 @@ snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
 
+##labmda value
+lambda1=1e-6
 res=[]
 time1=time.process_time()
 for j in range(p):
@@ -40,9 +42,11 @@ else:
 
 
 xxt=np.matmul(cxt.T,cxt)
+a1=np.diag(xxt)
 
+a2=a1+lambda1
+np.fill_diagonal(xxt,a2)
 xxtinv=np.linalg.pinv(xxt,rcond=math.sqrt(np.finfo(float).eps))
-
 reg=np.matmul(xxtinv,cxt.T)
 
 yhat=np.matmul(reg,beta)
