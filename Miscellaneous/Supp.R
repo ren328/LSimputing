@@ -33,6 +33,19 @@ for(i in 1:length(p1)){
 }
 p2<--log10(p1)
 
+##find the locus of the SNP
+require(data.table)
+##load the file partioned the LD block in paper Approximately independent linkage disequilibrium blocks in human populations
+ld_block = fread('')
+ld_block$chr = substr(ld_block$chr,4,5)
+##load the data which we want to find the corresponding loci, sholud contain chr,rs,and position three columns(i.e. chrmosome, rs id and position)
+data$locus=0
+require(dplyr)
+for(i in 1:nrow(data)){
+    temp = ld_block %>% filter(chr==data$chr[i])
+    id = findInterval(data$pos[i],temp$start)
+    data$locus[i]=which(ld_block$chr==temp$chr[id] & ld_block$start == temp$start[id])
+}
 
 ##The Venn diagrams is drawn with R package Venndiagram and RColorBrewer
 display_venn<-function(x,...){
