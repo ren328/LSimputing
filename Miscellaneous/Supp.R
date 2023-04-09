@@ -13,24 +13,6 @@ snp_rec[snp_rec==2]<-1
 m1<-lm(HDL~age+sex+age*sex+I(age^2)+I(sex*age^2),data)
 ypred<-predict(m1,data)
 
-##Code to pursue marginal association
-##Use proper function to load SNP data,change the path to your own, should be NA filled 
-snp="snp_path"
-##Use proper function to load trait
-trait="trait_path"
-
-beta<-c()
-beta_sd<-c()
-p_value<-c()
-for(i in 1:ncol(snp)){
-    #print(i)
-    m1<-lm(trait~snp[,i])
-    beta[i]<-m1$coef[2]
-    beta_sd[i]<-summary(m1)$coef[2,2]
-    p_value[i]<-summary(m1)$coef[2,4]
-}
-##save the result with proper function, change the path to your own
-save(beta,beta_sd,p_value,"result_path")
 
 ##setting of correlation plot
 plot(,,pch=20,col="#1F53AE",xlab=" ",ylab=" ",main=" ")
