@@ -46,6 +46,9 @@ Code to implement RandomForests model.
 #### Interaction.R
 Code for interaction analysis.
 
+#### Simulation.R
+Code for generating the simulation data.
+
 
 ## Miscellaneous
 #### Supp.R
