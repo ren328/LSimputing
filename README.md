@@ -22,7 +22,7 @@ The python file to implement our ls method with ADAM algorithm.
 
 
 ###### Gety.py
-To get the imputed trait value after getting the result of lsADAM.py.
+To get the imputed trait value after getting the result of LSADAM.py.
 
 #### Cholesky.py
 Code to perform cholesky decomposition.
