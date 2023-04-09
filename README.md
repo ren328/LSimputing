@@ -46,7 +46,8 @@ Code to implement RandomForests model.
 #### Interaction.R
 Code for interaction analysis.
 
-
+### Simulatio.R
+Code for generating the simluated trait values
 
 
 ## Miscellaneous
