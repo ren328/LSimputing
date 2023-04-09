@@ -34,6 +34,7 @@ snp_final<-lapply(data, function(y) {
 })}else{
 snp_final<-lapply(data,scale,scale=F)
 }
+}
            
 ##save the result
 save(snp_final,file="path")
