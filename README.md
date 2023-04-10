@@ -1,5 +1,5 @@
 This is the code for paper Using GWAS summary data to impute traits for genotyped individuals.
-This page is still under construction,if you have any questions, please send me an email(ren00075@umn.edu), thank you!
+If you have any questions, please send me an email(ren00075@umn.edu), thank you!
 
 
 ## Data Processing
