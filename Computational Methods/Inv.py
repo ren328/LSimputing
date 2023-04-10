@@ -1,9 +1,7 @@
 import math
 import scipy
 import scipy.linalg 
-import tensorflow as tf
 import numpy as np
-import json
 import os
 import pandas as pd
 import time
