@@ -18,7 +18,7 @@ beta="path"
 sd="path"
 
 
-##Use proper function to load SNP, should be NA filled and centered
+##Use proper function to load SNP, should be NA filled and proper scaled
 snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
@@ -39,23 +39,15 @@ if wls==True:
 else:
   cxt=np.matmul(res1,snp.T)
 
-
-
- 
-
-
 xxt=np.matmul(cxt.T,cxt)
 a1=np.diag(xxt)
 a2=a1+lam
 np.fill_diagonal(xxt,a2)
 
-
 xtbeta=np.matmul(cxt.T,beta)
 
 u= scipy.linalg.cholesky(xxt)
-
 w = scipy.linalg.solve(u.T, xtbeta)
-
 yhat=scipy.linalg.solve(u,w)
 ##end recording time
 time2=time.process_time()
