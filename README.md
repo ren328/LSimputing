@@ -19,8 +19,8 @@ Rtopy.R is an R file which is used in .py files to change .RData to the format w
 
 One could copy the content in the Rtopy.txt to the chunk where we load the snp in the corresponding .py file in computational methods to load .RData format into Python.
 
-#### LSADMM.py
-The python file to implement our ls method with ADMM algorithm.
+#### LSADAM.py
+The python file to implement our ls method with ADAM algorithm.
 
 
 
