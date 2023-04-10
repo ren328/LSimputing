@@ -14,7 +14,7 @@ beta="path"
 sd="path"
 ##change wls to True if want use WLS method
 wls=False
-##Use proper function to load SNP, should be NA filled and centered
+##Use proper function to load SNP, should be NA filled and proper scaled
 snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
