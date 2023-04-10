@@ -13,13 +13,15 @@ from rpy2.robjects.conversion import localconverter
 
 ##batchsize,if does not split into batch, then use number of individuals in the SNP matrix as batchsize
 batchsize=
+##batch number
+batch_num=
 ##change Rtoptyhon_pyth to your own 
 ##Use proper function to load the SNP matrix, here is an example of using the .RData format of SNP matrix.
 r = robjects.r
 r['source']('Rtopython_pyth/rtopy.R')
 rfunction = robjects.globalenv['f0']
 with localconverter(robjects.default_converter + pandas2ri.converter):
-     snp_test= rfunction(batchsize)
+     snp_test= rfunction(batch_num)
      snp_test= snp_test.T
         
 ##Use proper function to load the GWAS summary statistics(\beta*) according to the file format of the data
