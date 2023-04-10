@@ -16,13 +16,13 @@ To run the algorithms, one should prepare the proper scaled SNP matrix and the G
 ###### Rtopy.R
 This is an R file which is used in .py files to change .RData to the format which python file could use, if the snp matrix is not in .RData file, no need to use this file.
 
-#### LSADAM.py
-The python file to implement our ls method with ADAM algorithm.
+#### LSADMM.py
+The python file to implement our ls method with ADMM algorithm.
 
 
 
 ###### Gety.py
-To get the imputed trait value after getting the result of LSADAM.py.
+To get the imputed trait value after getting the result of LSADMM.py.
 
 #### Cholesky.py
 Code to perform cholesky decomposition.
