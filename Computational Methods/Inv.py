@@ -17,7 +17,7 @@ wls=False
 ##Use proper funciton to load GWAS summary statistics
 beta="path"
 sd="path"
-##Use proper function to load SNP, should be NA filled and centered
+##Use proper function to load SNP, should be NA filled and proper scaled
 snp="path"
 snp=np.array(snp)
 p=np.shape(snp)[1]
@@ -36,9 +36,6 @@ if wls==True:
   cxt=np.divide(cxt1.T,sd).T
 else:
   cxt=np.matmul(res1,snp.T)
-
-
- 
 
 xxt=np.matmul(cxt.T,cxt)
 
