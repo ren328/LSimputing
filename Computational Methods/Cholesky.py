@@ -14,8 +14,8 @@ lam=1e-6
 wls=False
 
 ##Use proper funciton to load GWAS summary statistics
-beta="path"
-sd="path"
+beta=np.loadtxt("path")
+sd=np.loadtxt("path")
 
 
 ##Use proper function to load SNP, should be NA filled and proper scaled
