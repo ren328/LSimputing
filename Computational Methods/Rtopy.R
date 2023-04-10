@@ -1,4 +1,4 @@
-f0<-function(1){
+f0<-function(num){
   ##load SNP matrix, should be a .RData file, for diffrent batches, change the RData_path to your own accordingly
   load(file="RData_path")
   ##change the snp matrix name to your own
