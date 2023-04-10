@@ -10,8 +10,8 @@ from rpy2.robjects import pandas2ri
 from rpy2.robjects.conversion import localconverter
 
 ##Use proper funciton to load GWAS summary statistics
-beta="path"
-sd="path"
+beta=np.loadtxt("path")
+sd=np.loadtxt("path")
 ##change wls to True if want use WLS method
 wls=False
 ##Use proper function to load SNP, should be NA filled and proper scaled
