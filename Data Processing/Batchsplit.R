@@ -29,7 +29,11 @@ data<-datasplit(chunksize,id,snp1)
 if(center==F){
 snp_final<-lapply(data, function(y) {
   apply(y, 2, function(z) {
-    (z - mean(z)) / (sd(z) * as.logical(sd(z)))
+    if (all(is.na(z)) | length(unique(na.omit(z))) == 1) {
+      z
+    } else {
+      (z - mean(na.omit(z))) / sd(na.omit(z))
+    }
   })
 })}else{
 snp_final<-lapply(data,scale,scale=F)
