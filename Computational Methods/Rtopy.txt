@@ -7,4 +7,4 @@ r['source']('Rtopython_pyth/rtopy.R')
 rfunction = robjects.globalenv['f0']
 with localconverter(robjects.default_converter + pandas2ri.converter):
      snp_test= rfunction(batch_num)
-     snp_test= snp_test.T
+     
